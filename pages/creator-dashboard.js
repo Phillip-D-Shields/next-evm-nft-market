@@ -58,8 +58,8 @@ export default function CreatorDashboard() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-4">
           {
             nfts.map((nft, i) => (
-              <div key={i} className="border shadow rounded-xl overflow-hidden">
-                <img src={nft.image} className="rounded" />
+              <div key={i} className="border shadow rounded-xl overflow-hidden  flex flex-col justify-between">
+                <img src={nft.image} className="rounded p-4 m-auto" />
                 <div className="p-4 bg-black">
                   <p className="text-2xl font-bold text-white">Price - {nft.price} Eth</p>
                 </div>
@@ -76,8 +76,8 @@ export default function CreatorDashboard() {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-4">
                 {
                   sold.map((nft, i) => (
-                    <div key={i} className="border shadow rounded-xl overflow-hidden">
-                      <img src={nft.image} className="rounded" />
+                    <div key={i} className="border shadow rounded-xl overflow-hidden flex flex-col justify-between">
+                      <img src={nft.image} className="rounded p-4 m-auto" />
                       <div className="p-4 bg-black">
                         <p className="text-2xl font-bold text-white">Price - {nft.price} Eth</p>
                       </div>

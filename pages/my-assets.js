@@ -2,7 +2,6 @@ import { ethers } from 'ethers'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import Web3Modal from "web3modal"
-import { Image } from 'next/image'
 
 import {
   nftmarketaddress, nftaddress
@@ -19,7 +18,7 @@ export default function MyAssets() {
   }, [])
   async function loadNFTs() {
     const web3Modal = new Web3Modal({
-      network: "mainnet",
+      network: "rinkeby",
       cacheProvider: true,
     })
     const connection = await web3Modal.connect()
@@ -54,7 +53,7 @@ export default function MyAssets() {
           {
             nfts.map((nft, i) => (
               <div key={i} className="border shadow rounded-xl overflow-hidden">
-                <Image  src={nft.image} className="rounded" alt={nft.name} />
+                <img  src={nft.image} className="rounded p-6 m-auto" alt={nft.image} />
                 <div className="p-4 bg-black">
                   <p className="text-2xl font-bold text-white">Price - {nft.price} Eth</p>
                 </div>

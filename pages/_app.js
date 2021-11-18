@@ -1,5 +1,5 @@
-import '../styles/globals.css'
-import Link from 'next/link'
+import "../styles/globals.css";
+import Link from "next/link";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -30,9 +30,10 @@ function MyApp({ Component, pageProps }) {
         </div>
       </nav>
       <div className="py-6"></div>
+      {/* content display */}
       <Component {...pageProps} />
     </div>
-  )
+  );
 }
 
-export default MyApp
+export default MyApp;

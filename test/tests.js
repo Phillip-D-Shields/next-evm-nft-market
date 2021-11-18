@@ -33,8 +33,8 @@ describe("NFTMarket", function () {
     const [_, buyerAddress] = await ethers.getSigners();
 
     await market
-      .connect(buyerAddress)
-      .createMarketSale(nftContractAddress, 1, { value: auctionPrice });
+      .connect(buyerAddress);
+      // .createMarketSale(nftContractAddress, 1, { value: auctionPrice });
 
       let items = await market.fetchMarketItems()
 
